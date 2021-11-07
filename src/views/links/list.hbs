@@ -11,9 +11,16 @@
                     </a>
                     <p class="m-2">{{descripcion}}</p>
                     <p>{{timeago created_at}}</p>
-                    <a href="" class="btn btn-danger">Borrar</a>
+                    <a href="/links/delete/{{id}}" class="btn btn-danger">Borrar</a>
                     <a href="" class="btn btn-secondary">Editar</a>
                 </div>
+            </div>
+        </div>
+        {{else}}
+        <div class="col-md-4 mx-auto">
+            <div class="card card-body text-center">
+                <p>NO HAY LINKS GUARDADOS</p>
+                <a href="/links/add">CREAR UNO</a>
             </div>
         </div>
         {{/each}}
