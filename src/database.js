@@ -7,7 +7,7 @@ const pool = mysql.createPool(database);
 pool.getConnection((err, connection) => {
     if (err) {
         if (err.code === 'PROTOCOL_CONNECTION_LOST') {
-            console.error('LA CONEXION CON LA DB FUE CERRADA')
+            console.error('LA CONEXION CON LA DB FUE CERRADA');
         }
         if (err.code === 'ER_CON_COUNT_ERROR') {
             console.error('LA DB TIENE MUCHAS CONEXIONES');
